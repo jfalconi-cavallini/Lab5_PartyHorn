@@ -7,4 +7,4 @@ function honk_Player(){
   document.getElementById("horn-sound").play();
 }
 
-document.getElementById("honk-btn").addEventListener("click",playHonk);
+document.getElementById("honk-btn").addEventListener("click",honk_Player);
