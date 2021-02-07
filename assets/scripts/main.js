@@ -48,7 +48,7 @@ function update_volume_image(){
         document.getElementById("honk-btn").disabled = false;
     }
 }
-function uupdate_volume_sound(){
+function update_volume_sound(){
     document.getElementById("horn-sound").volume = document.getElementById("volume-number").value / 100;
     document.getElementById("volume-slider").value = document.getElementById("volume-number").value;
     update_volume_image();
@@ -56,3 +56,4 @@ function uupdate_volume_sound(){
 document.getElementById("honk-btn").addEventListener("click",horn_Player);
 document.getElementById("audio-selection").addEventListener("change",change_horn_sound);
 document.getElementById("audio-selection").addEventListener("change",change_horn_image);
+document.getElementById("volume-number").addEventListener("input", update_volume_sound);
