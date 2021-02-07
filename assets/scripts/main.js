@@ -30,7 +30,7 @@ function change_horn_image(){
     }
 }
 function update_volume_image(){
-    let original_volume = document.getElementById("horn-sound").volume * 100;
+    let original_volume = (document.getElementById("horn-sound").volume) * 100;
     if(original_volume == 0){
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-0.svg";
         document.getElementById("honk-btn").disabled = true;
@@ -49,7 +49,7 @@ function update_volume_image(){
     }
 }
 function update_volume_sound(){
-    document.getElementById("horn-sound").volume = document.getElementById("volume-number").value / 100;
+    document.getElementById("horn-sound").volume = (document.getElementById("volume-number").value) / 100;
     document.getElementById("volume-slider").value = document.getElementById("volume-number").value;
     update_volume_image();
 }
